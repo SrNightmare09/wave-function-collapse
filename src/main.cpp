@@ -14,6 +14,7 @@ std::vector<char> left_collapse(char);
 std::vector<char> up_collapse(char);
 std::vector<char> find_intersection(std::vector<char>, std::vector<char>);
 int get_random_num(int, int);
+void update_grid(int, int, char);
 
 int main() {
 
@@ -61,4 +62,9 @@ int get_random_num(int lower, int upper) { // inclusive of both limits
     std::uniform_int_distribution<> distr(lower, upper);
     int random_num = distr(gen);
     return random_num;
+}
+
+void update_grid(int row, int column, char id) {
+    GRID[row][column] = id;
+    return;
 }
