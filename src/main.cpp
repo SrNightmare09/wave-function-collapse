@@ -14,11 +14,14 @@ std::vector<char> left_collapse(char);
 std::vector<char> up_collapse(char);
 std::vector<char> find_intersection(std::vector<char>, std::vector<char>);
 int get_random_num(int, int);
-void update_grid(int, int, char);
+void update_grid(int, int, std::vector<char>);
 void print_grid(); // testing purposes
 void start();
+void generate_grid();
 
 int main() {
+
+    generate_grid();
 
     return 0;
 
