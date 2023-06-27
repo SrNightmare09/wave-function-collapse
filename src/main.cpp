@@ -89,8 +89,7 @@ void print_grid() {
 void start() {
     // generate random index for a tile to put it at the upper corner of the grid
     std::vector<char> ids = {'b', 'u', 'l', 'r', 'd'};
-    int random_index = get_random_num(0, 4);
-    update_grid(0, 0, ids[random_index]);
+    update_grid(0, 0, ids);
     return;
 }
 
