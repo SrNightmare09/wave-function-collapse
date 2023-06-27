@@ -16,6 +16,8 @@ std::vector<char> find_intersection(std::vector<char>, std::vector<char>);
 int get_random_num(int, int);
 void update_grid(int, int, char);
 void print_grid(); // testing purposes
+std::vector<char> find_options(char);
+void start();
 
 int main() {
 
@@ -79,4 +81,12 @@ void print_grid() {
         std::cout << std::endl;
     }
 
+}
+
+void start() {
+    // generate random index for a tile to put it at the upper corner of the grid
+    std::vector<char> ids = {'b', 'u', 'l', 'r', 'd'};
+    int random_index = get_random_num(0, 4);
+    update_grid(0, 0, ids[random_index]);
+    return;
 }
