@@ -2,6 +2,7 @@
 #include <unordered_map>
 #include <vector>
 #include <algorithm>
+#include <random>
 
 std::vector<std::vector<char>> GRID = {
     {'-', '-', '-'},
@@ -12,6 +13,7 @@ std::vector<std::vector<char>> GRID = {
 std::vector<char> left_collapse(char);
 std::vector<char> up_collapse(char);
 std::vector<char> find_intersection(std::vector<char>, std::vector<char>);
+int get_random_num(int, int);
 
 int main() {
 
@@ -51,4 +53,12 @@ std::vector<char> find_intersection(std::vector<char> a, std::vector<char> b) {
     std::vector<char> intersection;
     std::set_intersection(a.begin(), a.end(), b.begin(), b.end(), std::back_inserter(intersection));
     return intersection;
+}
+
+int get_random_num(int lower, int upper) { // inclusive of both limits
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> distr(lower, upper);
+    int random_num = distr(gen);
+    return random_num;
 }
