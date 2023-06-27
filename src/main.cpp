@@ -91,8 +91,8 @@ std::vector<char> find_options(char ch) {
     std::unordered_map<char, std::vector<char>> valid_options = {
         {'u', {'u', 'd', 'l'}},
         {'d', {'u', 'd', 'l'}},
+        {'r', {'u', 'd', 'l'}},
         {'l', {'r', 'b'}},
-        {'r', {'u', 'd'}},
         {'b', {'r', 'b'}},
     };
 
