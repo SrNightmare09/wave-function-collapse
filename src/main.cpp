@@ -15,6 +15,7 @@ std::vector<char> up_collapse(char);
 std::vector<char> find_intersection(std::vector<char>, std::vector<char>);
 int get_random_num(int, int);
 void update_grid(int, int, char);
+void print_grid(); // testing purposes
 
 int main() {
 
@@ -67,4 +68,15 @@ int get_random_num(int lower, int upper) { // inclusive of both limits
 void update_grid(int row, int column, char id) {
     GRID[row][column] = id;
     return;
+}
+
+void print_grid() {
+
+    for (int i = 0; i < GRID.size(); i++) {
+        for (int j = 0; j < GRID[i].size(); j++) {
+            std::cout << GRID[i][j] << " ";
+        }
+        std::cout << std::endl;
+    }
+
 }
