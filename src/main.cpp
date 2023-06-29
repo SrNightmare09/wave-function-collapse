@@ -6,6 +6,7 @@
 #include "collapse.cpp"
 #include "printboard.cpp"
 
+
 std::vector<std::vector<char> > GRID = {
     {' ', ' ', ' ', ' ', ' '},
     {' ', ' ', ' ', ' ', ' '},
@@ -13,6 +14,7 @@ std::vector<std::vector<char> > GRID = {
     {' ', ' ', ' ', ' ', ' '},
     {' ', ' ', ' ', ' ', ' '}
 };
+
 
 
 int main () {
