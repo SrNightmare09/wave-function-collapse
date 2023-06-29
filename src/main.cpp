@@ -4,6 +4,14 @@
 #include <unordered_map>
 #include <random>
 
+int get_random_num(int, int);
+void start();
+std::vector<char> roof_collapse(char);
+std::vector<char> left_collapse(char);
+void update_grid(int, int, std::vector<char>);
+void collapse();
+void printboard();
+
 std::vector<std::vector<char>> GRID = {
     {' ', ' ', ' ', ' ', ' '},
     {' ', ' ', ' ', ' ', ' '},
@@ -11,6 +19,11 @@ std::vector<std::vector<char>> GRID = {
     {' ', ' ', ' ', ' ', ' '},
     {' ', ' ', ' ', ' ', ' '}
 };
+
+int main () {
+    collapse();
+    printboard();
+}
 
 int get_random_num(int lower, int upper) {
     std::random_device rd;
@@ -114,9 +127,4 @@ void printboard() {
 
         std::cout << std::endl;
     }
-}
-
-int main () {
-    collapse();
-    printboard();
 }
