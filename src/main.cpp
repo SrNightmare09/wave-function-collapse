@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <unordered_map>
 #include <random>
 
 std::vector<std::vector<char>> GRID = {
